@@ -47,6 +47,18 @@ import { compile } from 'dist/template-js.js'
     })
 </script>
 ```
+或
+```js
+import {
+	compile
+} from 'dist/template-js.js'
+
+let demo_template = compile('demo')
+document.getElementById('demo').innerHTML = demo_template({
+    name: 'saobby',
+    login: true
+})
+```
 
 template-js 有两种标签，分别是`<% %>`与 `<%= %>`
 
