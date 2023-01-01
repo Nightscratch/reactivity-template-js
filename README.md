@@ -31,7 +31,7 @@ import { compile } from 'dist/template-js.js'
 
 ## 使用
 
-一个demo，在id="demo"的div里是模板，然后通过 template.compile 编译。
+一个demo，在id="demo"的div里是模板，然后通过 template.compile 编译。（该示例在 index.html 里）
 ```html
 <div id="demo">
     <p>Hello <%= name %></p>
