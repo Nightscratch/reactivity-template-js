@@ -5,7 +5,9 @@ JavaScript 模板引擎
 
 js-template 可以用js生成 HTML 页面。而且非常小，不到1K
 
-## 安装
+## 打包
+
+（你得先安装rollup）
 
 ```
 cd js-template
