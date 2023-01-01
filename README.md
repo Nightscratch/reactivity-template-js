@@ -18,15 +18,15 @@ npm install
 npm run build
 ```
 
-引入 dist/out.js 的 compile
+引入 dist/template-js.js 的 compile
 
 ```
-import { compile } from 'dist/out.js'
+import { compile } from 'dist/template-js.js'
 ```
 
-或修改rollup.config.js中output.format为iife（立即调用函数表达式）打包后引入out.js。
+或修改rollup.config.js中output.format为iife（立即调用函数表达式）打包后引入template-js.js。
 ```html
-<script src="./dist/out.js"></script>
+<script src="./dist/template-js.js"></script>
 ```
 
 ## 使用
