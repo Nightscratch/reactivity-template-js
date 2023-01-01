@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./dist/out.js"></script>
+    <script src="./dist/template-js.js"></script>
     <title>SALT - TEST</title>
 </head>
 <body>
-    <div id="hello">
-        <p>Hello</p>
-        <h1><%= name %></h1>
-        <% if (complex) { %>
-            <p>s</p>    
+    <!-- 在README.MD的示例 -->
+    <div id="demo">
+        <p>Hello <%= name %></p>
+        <% if (!login) { %>
+            <p>请登录</p>    
         <% } %>
     </div>
     <script>
-        let hello = salt.compile('hello')
-        document.getElementById('hello').innerHTML = hello({
-            name:'cat',
-            complex:true
+        let demo_template = template.compile('demo')
+        document.getElementById('demo').innerHTML = demo_template({
+            name:'saobby',
+            login:true
         })
     </script>
 </body>
