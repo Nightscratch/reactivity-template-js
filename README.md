@@ -12,13 +12,10 @@ js-template 可以用js生成 HTML 页面。而且非常小，不到1K
 ```
 cd js-template
 npm install
+npm run build
 ```
 
 ## 引入
-
-```
-npm run build
-```
 
 引入 dist/template-js.js 的 compile
 
