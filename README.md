@@ -1,6 +1,10 @@
 # js-template
 JavaScript 模板引擎
 
+## 简介
+
+js-template 可以用js生成 HTML 页面。而且非常小，不到1K
+
 ## 安装
 
 ```
@@ -28,7 +32,7 @@ import { compile } from 'dist/out.js'
 ## 使用
 
 一个demo，在id="demo"的div里是模板，然后通过 template.compile 编译。
-```
+```html
 <div id="demo">
     <p>Hello <%= name %></p>
     <% if (!login) { %>
@@ -47,5 +51,6 @@ import { compile } from 'dist/out.js'
 template-js 有两种标签，分别是`<% %>`与 `<%= %>`
 
 `<%= %>`: 输出数据到模板
+
 `<% %>` : 脚本标签，可以执行Js
 
