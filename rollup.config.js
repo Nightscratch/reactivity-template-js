@@ -3,7 +3,7 @@ import { terser } from 'rollup-plugin-terser';
 export default {
   input: 'src/entry.js',
   output: {
-    name:'js-template',
+    name:'template',
 	file: 'dist/out.js',
     format: 'es',
   },
