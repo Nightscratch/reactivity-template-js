@@ -26,7 +26,7 @@ npm i reactivity-template
 ## 引入
 
 引入
-```
+```js
 import compile from 'reactivity-template'
 ```
 
