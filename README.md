@@ -3,7 +3,7 @@ JavaScript 模板引擎
 
 ## 简介
 
-js-template 可以用js生成 HTML 页面。而且非常小，不到1K
+js-template 可以用js生成 HTML 页面。而且非常小，不到1K。并且支持响应式
 
 ## 打包
 
@@ -73,22 +73,22 @@ template-js 有两种标签，分别是`<% %>`与 `<%= %>`
 
 ```html
 <div id="demo">
-	<p>Hello <%= name %></p>
-	<% if (!login) { %>
-	    <p>请登录</p>    
-	<% } %>
-	<%= time %>
+    <p>Hello <%= name %></p>
+    <% if (!login) { %>
+        <p>请登录</p>    
+    <% } %>
+    <%= time %>
 </div>
 <script>
-	let data = {
-	    name:'saobby',
-	    login:true,
-	    time:0,
-	}
-	data = template.compile('demo',data,reactive=true);
+    let data = {
+        name:'saobby',
+        login:true,
+        time:0,
+    }
+    data = template.compile('demo',data,reactive=true);
 
-	setInterval(()=>{
-	    data.time ++
-	},1000)
+    setInterval(()=>{
+        data.time ++
+    },1000)
 </script>
 ```
