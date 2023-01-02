@@ -4,7 +4,7 @@ export default {
   input: 'src/entry.js',
   output: {
     name:'template',
-	  file: 'dist/templatejs.js',
+	  file: 'dist/template-js.js',
     format: 'es',
   },
   plugins: [
