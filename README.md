@@ -5,12 +5,6 @@ JavaScript 响应式模板引擎
 
 js-template 可以用js生成 HTML 页面。而且非常小，不到1K。并且支持响应式
 
-## 安装
-
-```
-npm i reactivity-template
-```
-
 ## 打包
 
 请先安装[rollup.js](https://rollupjs.org/guide/en/)
@@ -19,6 +13,12 @@ npm i reactivity-template
 cd js-template
 npm install
 npm run build
+```
+
+## 安装
+
+```
+npm i reactivity-template
 ```
 
 ## 引入
