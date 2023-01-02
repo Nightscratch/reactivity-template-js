@@ -10,7 +10,7 @@ js-template 可以用js生成 HTML 页面。而且非常小，不到1K。并且�
 请先安装[rollup.js](https://rollupjs.org/guide/en/)
 
 ```
-cd js-template
+cd reactivity-template-js
 npm install
 npm run build
 ```
@@ -28,10 +28,10 @@ npm i reactivity-template
 import compile from 'reactivity-template'
 ```
 
+或在html文件中直接引入iife
 
-或修改rollup.config.js中output.format为iife（立即调用函数表达式）打包后引入template-js.js。
 ```html
-<script src="./dist/template-js.js"></script>
+<script src="./dist/template.iife.js"></script>
 ```
 
 ## 使用
