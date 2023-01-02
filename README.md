@@ -1,5 +1,6 @@
 # reactivity-template-js
 JavaScript 响应式模板引擎
+[English tutorial documents](./README-EN.md)
 
 ## 简介
 
