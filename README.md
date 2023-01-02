@@ -7,7 +7,7 @@ JavaScript 响应式模板引擎
 
 js-template 可以用js生成 HTML 页面。而且非常小，不到1K。并且支持响应式
 
-## 构建
+## 构建 （如果你只是想使用就不用构建）
 
 请先安装[rollup.js](https://rollupjs.org/guide/en/)
 
