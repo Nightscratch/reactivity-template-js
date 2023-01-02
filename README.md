@@ -1,5 +1,5 @@
-# js-template
-JavaScript 模板引擎
+# reactivity-template-js
+JavaScript 响应式模板引擎
 
 ## 简介
 
