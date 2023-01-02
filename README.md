@@ -31,7 +31,7 @@ import compile from 'reactivity-template'
 或在html文件中直接引入iife
 
 ```html
-<script src="./dist/template.iife.js"></script>
+<script src="./dist/templatejs.iife.js"></script>
 ```
 
 ## 使用
