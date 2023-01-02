@@ -1,43 +1,71 @@
 # reactivity-template-js
-JavaScript 响应式模板引擎
-[English tutorial documents](./README-EN.md)
 
-## 简介
+**This document is a machine translation and may be incorrect**
 
-js-template 可以用js生成 HTML 页面。而且非常小，不到1K。并且支持响应式
+JavaScript Responsive Template Engine
 
-## 构建
+[中文教程文档](./README.md)
 
-请先安装[rollup.js](https://rollupjs.org/guide/en/)
+
+
+## Introduction
+
+Jstemplate can be used to generate HTML pages. And it is very small, less than 1K. And it is reactivity
+
+## Build
+
+Please install [rollup. js](https://rollupjs.org/guide/en/) first
+
 
 ```
 cd reactivity-template-js
+
 npm install
+
 npm run build
 ```
 
-## 安装
+
+
+## Install
+
 
 ```
+
 npm i reactivity-template
+
 ```
 
-## 引入
 
-引入
+
+## Introduction
+
 ```
+
 import compile from 'reactivity-template'
+
 ```
 
-或在html文件中直接引入iife
+
+
+Or directly import iife into the html file
+
+
 
 ```html
+
 <script src="./dist/templatejs.iife.js"></script>
+
 ```
 
-## 使用
 
-一个demo，在id="demo"的div里是模板，然后通过 template.compile 编译。（该示例在 index.html 里）
+
+## Using
+
+
+
+A demo is a template in the div id="demo", and then compiled through template.com. (This example is in index.html)
+
 ```html
 <div id="demo">
     <p>Hello <%= name %></p>
@@ -53,8 +81,11 @@ import compile from 'reactivity-template'
     })
 </script>
 ```
-或
+
+or
+
 ```js
+
 import compile from 'reactivity-template'
 
 let demo_template = compile('demo')
@@ -62,19 +93,22 @@ document.getElementById('demo').innerHTML = demo_template({
     name: 'saobby',
     login: true
 })
+
 ```
 
-template-js 有两种标签，分别是`<% %>`与 `<%= %>`
 
-`<%= %>`: 输出数据到模板
 
-`<% %>` : 脚本标签，可以执行Js
+Template js has two types of labels, namely '<%%>' and '<%=%>`
 
-## 响应式
+`<%=%>`: output data to template
 
-有时在数据更改时调用渲染有点麻烦，所以你可以使用响应式让templateJS来监测数据的改变并重新渲染。
+`<%%>`: script label, which can execute Js
 
-只需要在template.compile 里加上 reactive=true 即可使用响应式
+## reactivity
+
+Sometimes it is a bit troublesome to call rendering when the data changes, so you can use the reactivity mode to let templateJS monitor the data changes and re render.
+
+You only need to add `reactive=true` to the template. template to use the responsive
 
 ```html
 <div id="demo">
@@ -96,12 +130,17 @@ template-js 有两种标签，分别是`<% %>`与 `<%= %>`
         data.time ++
     },1000)
 </script>
+
 ```
 
-以上代码的`template.compile`返回了一个Proxy，当data值改变时重新渲染。
 
-若你想获取整个`data`值的话请使用`data.value`。否则请用`data.key`
 
-若你想要赋值整个`data`的话请`data.value = {...}`
+The 'template. template' of the above code returns a proxy, which will be re rendered when the data value changes.
 
-但是只想修改它的属性的话可以直接`data.key = ...`修改。比如上面的代码修改data的time就可以直接`data.time ++`
+If you want to get the entire 'data' value, please use 'data. value'. Otherwise, please use ` data.key`
+
+If you want to assign the whole 'data', please 'data. value={...}`
+
+
+
+But if you just want to modify its properties, you can directly ` data. key=` Modification. For example, the above code can directly ` data.time 'by modifying the time of data++`
