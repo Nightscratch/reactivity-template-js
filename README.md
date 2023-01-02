@@ -65,3 +65,30 @@ template-js 有两种标签，分别是`<% %>`与 `<%= %>`
 
 `<% %>` : 脚本标签，可以执行Js
 
+## 响应式
+
+有时在数据更改时调用渲染有点麻烦，所以你可以使用响应式让templateJS来监测数据的改变并重新渲染。
+
+只需要在template.compile 里加上 reactive=true 即可使用响应式
+
+```html
+<div id="demo">
+	<p>Hello <%= name %></p>
+	<% if (!login) { %>
+	    <p>请登录</p>    
+	<% } %>
+	<%= time %>
+</div>
+<script>
+	let data = {
+	    name:'saobby',
+	    login:true,
+	    time:0,
+	}
+	data = template.compile('demo',data,reactive=true);
+
+	setInterval(()=>{
+	    data.time ++
+	},1000)
+</script>
+```
