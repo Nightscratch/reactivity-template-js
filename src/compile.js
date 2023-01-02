@@ -8,7 +8,7 @@ const generate = (template) => {
 		})
 	return `let str = '';with (data) { str = '${template}'; } return str`
 }
-    
+
 export const compile = (id, data, reactive = false) => {
 	let template = document.getElementById(id)
 		.innerHTML
@@ -22,18 +22,18 @@ export const compile = (id, data, reactive = false) => {
 			.innerHTML = res.render(res.data);
 		return new Proxy(res, {
 			get(target, key) {
-        if (key == 'value') {
-          return target.data;
-        }else{
-          return target.data[key];
-        }
+				if (key == 'value') {
+					return target.data;
+				} else {
+					return target.data[key];
+				}
 			},
 			set(target, key, value) {
-        if (key == 'value') {
-          target.data = value;
-        }else{
-          target.data[key] = value;
-        }
+				if (key == 'value') {
+					target.data = value;
+				} else {
+					target.data[key] = value;
+				}
 				document.getElementById(id)
 					.innerHTML = target.render(target.data);
 			}
