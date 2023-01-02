@@ -135,12 +135,16 @@ You only need to add `reactive=true` to the template. template to use the respon
 
 
 
-The 'template. template' of the above code returns a proxy, which will be re rendered when the data value changes.
-
-If you want to get the entire 'data' value, please use 'data. value'. Otherwise, please use ` data.key`
-
-If you want to assign the whole 'data', please 'data. value={...}`
+The template. template of the above code returns a proxy, which will be re rendered when the data value changes.
 
 
 
-But if you just want to modify its properties, you can directly ` data. key=` Modification. For example, the above code can directly ` data.time 'by modifying the time of data++`
+If you want to get the whole data value, please use `data.value`. Otherwise, please use `data.key`
+
+
+
+If you want to assign the whole data, please `data.value={...}`
+
+
+
+But if you just want to modify its properties, you can directly `data.key=...` For example, the above code can directly modify the time of data to `data.time++`
