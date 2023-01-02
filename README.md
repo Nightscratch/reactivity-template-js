@@ -93,6 +93,10 @@ template-js 有两种标签，分别是`<% %>`与 `<%= %>`
 </script>
 ```
 
-以上代码的`template.compile`返回了一个Proxy当data值改变时重新渲染。
-若你想获取`data`的值的话请使用`data.value`。
-如果想要赋值整个`data`的话请`data.value = {...}`但是若只想修改它的属性的话可以直接修改。比如上面的代码修改data的time就可以直接`data.time ++`
+以上代码的`template.compile`返回了一个Proxy，当data值改变时重新渲染。
+
+若你想获取整个`data`值的话请使用`data.value`。否则请用`data.key`
+
+若你想要赋值整个`data`的话请`data.value = {...}`
+
+但是只想修改它的属性的话可以直接`data.key = ...`修改。比如上面的代码修改data的time就可以直接`data.time ++`
