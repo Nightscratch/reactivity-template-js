@@ -1,6 +1,8 @@
 # reactivity-template-js
 JavaScript 响应式模板引擎
 
+[English documents](./README-EN.MD)
+
 ## 简介
 
 js-template 可以用js生成 HTML 页面。而且非常小，不到1K。并且支持响应式
