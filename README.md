@@ -7,7 +7,7 @@ js-template 可以用js生成 HTML 页面。而且非常小，不到1K。并且�
 
 ## 打包
 
-（你得先安装rollup）
+请先安装[rollup.js](https://rollupjs.org/guide/en/)
 
 ```
 cd js-template
